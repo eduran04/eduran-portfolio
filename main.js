@@ -282,20 +282,3 @@ function initScrollCuePulse() {
 }
 
 initScrollCuePulse();
-
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const name = form.name.value;
-  const email = form.email.value;
-  const message = form.message.value;
-  const mailto =
-    'mailto:eduran@uccs.edu?subject=Portfolio%20Contact%20from%20' +
-    encodeURIComponent(name) +
-    '&body=' +
-    encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-  window.location.href = mailto;
-}
-
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) contactForm.addEventListener('submit', handleSubmit);

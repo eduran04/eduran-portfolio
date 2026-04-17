@@ -877,20 +877,8 @@
     margin-bottom: 48px;
   }
 
-  .contact-email {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: clamp(22px, 2.4vw, 28px);
-    border-bottom: 1px solid var(--ink);
-    padding-bottom: 6px;
-    display: inline-block;
-    transition: opacity 0.3s;
-  }
-
-  .contact-email:hover { opacity: 0.6; }
-
   .contact-links {
-    margin-top: 48px;
+    margin-top: 0;
     display: flex;
     gap: 32px;
     font-family: var(--mono);
@@ -913,63 +901,29 @@
     margin-left: 6px;
   }
 
-  /* Form */
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+  .contact-status {
+    align-self: start;
+    padding: 32px 36px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--bg-alt);
   }
 
-  .form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .form-field label {
+  .contact-status-lead {
     font-family: var(--mono);
     font-size: 10px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--muted);
+    margin: 0 0 14px;
   }
 
-  .form-field input,
-  .form-field textarea {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--line);
-    padding: 12px 0;
-    font-family: var(--serif);
-    font-size: 18px;
-    color: var(--ink);
-    outline: none;
-    transition: border-color 0.3s;
-    resize: none;
-    width: 100%;
+  .contact-status p:not(.contact-status-lead) {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink-soft);
   }
-
-  .form-field input:focus,
-  .form-field textarea:focus { border-color: var(--ink); }
-  .form-field textarea { min-height: 80px; }
-
-  .form-submit {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    background: var(--ink);
-    color: var(--bg);
-    border: none;
-    padding: 18px 28px;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: opacity 0.3s;
-    align-self: flex-start;
-    margin-top: 8px;
-  }
-
-  .form-submit:hover { opacity: 0.85; }
 
   /* ============ FOOTER ============ */
   footer {
@@ -1204,14 +1158,6 @@
     .section-heading {
       font-size: clamp(36px, 10vw, 72px);
     }
-
-    .form-submit {
-      min-height: 44px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -1264,10 +1210,4 @@
     .nav-backdrop { transition: none; }
     .nav-menu-icon span { transition: none; }
 
-    .form-field input,
-    .form-field textarea,
-    .form-submit,
-    .contact-email {
-      transition: none;
-    }
   }
