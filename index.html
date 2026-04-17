@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Elizandro Duran — Computer Science</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav id="nav" aria-label="Primary">
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <a href="#home" class="logo">ED.</a>
+  <div class="nav-panel" id="navPanel">
+  <ul class="nav-links" id="navLinks" aria-label="Site navigation">
+    <li class="nav-drawer-heading"><span id="navDrawerHeading">Menu</span></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  </div>
+  <div class="nav-right">
+    <button class="nav-menu-btn" type="button" id="navMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navPanel" aria-haspopup="dialog">
+      <span class="nav-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-toggle-thumb">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div>
+    <div class="hero-meta">
+      <span>Portfolio — 001</span>
+      <span>MMXXVI</span>
+    </div>
+    <h1 class="hero-title" id="heroTitle" aria-label="Elizandro Duran">
+      Elizandro<br>
+      <em>Duran.</em>
+    </h1>
+  </div>
+
+  <p class="hero-intro">
+    Hi, I'm Elizandro - a <strong>first-generation Computer Science student</strong> at the University of Colorado Colorado Springs, concentrating in 
+    Cybersecurity. I'm looking forward to utilizing my skills in Cyber, Software, and Hardware Engineering to build secure systems for real world applications. 
+  </p>
+
+  <div class="hero-footer">
+    <span>Colorado Springs, CO</span>
+    <div class="scroll-cue">
+      <span>Scroll</span>
+      <span class="line"></span>
+    </div>
+    <span>U.S. Citizen</span>
+  </div>
+</section>
+
+<!-- ============ PROJECT EXPERIENCE ============ -->
+<section id="projects">
+  <div class="section-label">Projects</div>
+  <h2 class="section-heading">Project <em>experience.</em></h2>
+
+  <div class="featured-grid">
+
+    <article class="featured-item reveal">
+      <div class="featured-visual">
+        <a class="thumb-ectf thumb-linked" href="https://ectf.mitre.org/" target="_blank" rel="noopener noreferrer" aria-label="MITRE Embedded Capture the Flag — open official competition site">
+          <img src="assets/ectf-mitre.png" alt="MITRE eCTF logo" width="220" height="220" loading="lazy" decoding="async" />
+        </a>
+      </div>
+      <div class="featured-body">
+        <div class="project-num">Project 01 — 2026</div>
+        <h3>MITRE <em>eCTF</em> 2026</h3>
+        <p class="desc">Secure HSM firmware for the MSPM0L2228, developed with a team of four (Team Sunrise, UCCS). Stores and transfers IC fabrication files with group-based authorization and PIN protection under the eCTF adversarial harness; the competition toolchain uses Docker for reproducible builds and testing. Cryptography includes ChaCha20-Poly1305, PBKDF2-SHA256, HKDF-SHA256, and HMAC-SHA-256, as documented in our system design (attack model, UART command set, defense-in-depth).</p>
+        <div class="featured-tags">
+          <span>Embedded Systems</span>
+          <span>Cryptography</span>
+          <span>C</span>
+          <span>Docker</span>
+          <span>Security</span>
+        </div>
+        <div class="view-links">
+          <a class="view-link" href="https://github.com/3unrise/2026-ectf-uccs-design" target="_blank" rel="noopener">View project →</a>
+          <a class="view-link" href="https://ectf.mitre.org/" target="_blank" rel="noopener noreferrer">eCTF competition →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="featured-item reverse reveal">
+      <div class="featured-visual">
+        <div class="thumb-portfolai">
+          <img class="portfolai-logo-img" src="assets/portfolai-logo.png" alt="PortfolAI — stylized tech penguin logo" width="400" height="400" loading="lazy" decoding="async" />
+        </div>
+      </div>
+      <div class="featured-body">
+        <div class="project-num">Project 02 — 2025</div>
+        <h3>Portfol<em>AI</em></h3>
+        <p class="desc">Built by a team of four—an AI-driven investment platform for real-time market data, financial news, and sentiment. Django backend with secure object-oriented design; data persisted in PostgreSQL through Supabase. Integrated OpenAI, FinHub, and NewsAPI; shipped with CI/CD on Render and Cloudflare.</p>
+        <div class="featured-tags">
+          <span>Django</span>
+          <span>Python</span>
+          <span>PostgreSQL</span>
+          <span>Supabase</span>
+          <span>AI / OpenAI</span>
+          <span>CI/CD</span>
+        </div>
+        <a class="view-link" href="https://github.com/eduran04/PortfolAI-CS4300-Fall-2024-Group-4" target="_blank" rel="noopener">View project →</a>
+      </div>
+    </article>
+
+    <article class="featured-item reveal">
+      <div class="featured-visual">
+        <a class="thumb-df thumb-linked" href="https://gitlab.com/cs4930-df/Digital-Fingerprint" target="_blank" rel="noopener noreferrer" aria-label="Digital Fingerprint Analysis Tool — open repository on GitLab">
+          <img src="assets/digital-fingerprint.png" alt="Glowing cyan fingerprint in a digital scan frame" width="800" height="600" loading="lazy" decoding="async" />
+        </a>
+      </div>
+      <div class="featured-body">
+        <div class="project-num">Project 03 — 2025</div>
+        <h3>Digital Fingerprint <em>Analysis Tool.</em></h3>
+        <p class="desc">A privacy-focused web application that analyzes browser fingerprinting data so users can understand their online privacy exposure. Built with React and Flask (FingerprintJS Pro API), shadcn/ui and Tailwind, with a minimalist dark UI. Processing stays in-session—no storage or retention, aligned with GDPR/CCPA expectations. Deployed on Render.</p>
+        <div class="featured-tags">
+          <span>React</span>
+          <span>Flask</span>
+          <span>Privacy</span>
+          <span>Tailwind</span>
+          <span>Render</span>
+        </div>
+        <a class="view-link" href="https://gitlab.com/cs4930-df/Digital-Fingerprint" target="_blank" rel="noopener noreferrer">View on GitLab →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ WORK EXPERIENCE ============ -->
+<section id="work">
+  <div class="section-label">Experience</div>
+  <h2 class="section-heading">Work <em>experience.</em></h2>
+
+  <div class="work-list">
+
+    <div class="work-row reveal">
+      <div class="work-year">2026</div>
+      <div class="work-body work-body-with-brand">
+        <div class="theme-img-swap work-brand-swap">
+          <img class="work-brand-img theme-img-light" src="assets/northrop-ng-light.png" alt="Northrop Grumman logo" width="112" height="40" loading="lazy" decoding="async" />
+          <img class="work-brand-img theme-img-dark" src="assets/northrop-ng-dark.png" alt="" width="112" height="40" loading="lazy" decoding="async" aria-hidden="true" />
+        </div>
+        <div class="work-body-text">
+          <h4>Software Engineering Intern</h4>
+          <div class="company">Northrop Grumman</div>
+        </div>
+      </div>
+      <div class="work-tags-inline">
+        <span>Defense</span>
+        <span>Aerospace</span>
+      </div>
+      <div class="work-status"><span class="status-dot"></span>Incoming</div>
+    </div>
+
+    <div class="work-row reveal">
+      <div class="work-year">2026 —</div>
+      <div class="work-body work-body-with-brand">
+        <img class="work-brand-img work-brand-img--dining" src="assets/uccs-dining.png" alt="UCCS Dining Services" width="88" height="88" loading="lazy" decoding="async" />
+        <div class="work-body-text">
+          <h4>Student IT Material Manager</h4>
+          <div class="company">UCCS Dining Services</div>
+        </div>
+      </div>
+      <div class="work-tags-inline">
+        <span>IT Support</span>
+        <span>Hardware</span>
+      </div>
+      <div class="work-status">Current</div>
+    </div>
+
+    <div class="work-row reveal">
+      <div class="work-year">2022 —</div>
+      <div class="work-body work-body-with-brand">
+        <img class="work-brand-img work-brand-img--raising" src="assets/raising-canes.png" alt="Raising Cane's Chicken Fingers" width="160" height="56" loading="lazy" decoding="async" />
+        <div class="work-body-text">
+          <h4>Certified Trainer &amp; Specialist</h4>
+          <div class="company">Raising Cane's</div>
+        </div>
+      </div>
+      <div class="work-tags-inline">
+        <span>Leadership</span>
+        <span>Training</span>
+      </div>
+      <div class="work-status">Current</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-label-col">
+      <div class="section-label">About</div>
+      <p class="about-quote">"Curious, motivated, and always learning."</p>
+    </div>
+
+    <div class="about-body reveal">
+      <p>I'm a <strong>first-generation Computer Science student</strong> at the University of Colorado Colorado Springs, specializing in <strong>Cybersecurity</strong>. Through the College of Engineering, I've built a foundation in software engineering and cybersecurity.</p>
+
+      <p>What drives me is the problem itself, whether it's hardening an embedded system against replay attacks or setting up an AI-driven pipeline, I enjoy sitting with the hard parts until they eventuallymake sense. I'm equally comfortable debugging cryptographic protocols and working alongside a team to ship a product.</p>
+
+      <p>Looking ahead, I want to build my career at the <strong>intersection of software engineering and security</strong> — contributing to systems where correctness matters. My upcoming internship at Northrop Grumman is the next step in that direction.</p>
+
+      <div class="education-block">
+        <h4>Education</h4>
+        <div class="edu-item">
+          <div class="edu-item-text">
+            <h5>University of Colorado Colorado Springs</h5>
+            <p>B.S. Computer Science — Cybersecurity · President's List</p>
+          </div>
+          <div class="edu-date">Fall 2026</div>
+        </div>
+
+        <div class="awards">
+          <div class="awards-title">Awards &amp; Coursework</div>
+          <div class="awards-list">
+            <span>Chancellor's Award</span>
+            <span>Reisher's Scholarship</span>
+            <span>Cybersecurity Scholarship</span>
+            <span>Python Programming</span>
+            <span>C Programming</span>
+            <span>Advanced Software Engineering</span>
+            <span>Cryptography</span>
+            <span>Design &amp; Analysis of Algorithms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="skills-section">
+  <div class="section-label">Skills</div>
+  <h2 class="section-heading">Skills &amp; <em>tools.</em></h2>
+
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h4>Languages</h4>
+      <div class="skill-list">
+        <span>Python</span>
+        <span>Java</span>
+        <span>JavaScript</span>
+        <span>C++</span>
+        <span>C</span>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h4>Frameworks &amp; Tools</h4>
+      <div class="skill-list">
+        <span>Docker</span>
+        <span>Django</span>
+        <span>React</span>
+        <span>REST APIs</span>
+        <span>PostgreSQL</span>
+        <span>Git</span>
+        <span>Jira</span>
+        <span>SIEM</span>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h4>Systems &amp; Cloud</h4>
+      <div class="skill-list">
+        <span>Linux (Ubuntu)</span>
+        <span>Linux (RedHat)</span>
+        <span>Windows Server</span>
+        <span>Azure</span>
+        <span>AWS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-left">
+      <div class="section-label">Contact</div>
+      <h2>Get in <em>touch.</em></h2>
+      <p>Have a project in mind, want to collaborate, or just want to say hi? My inbox is always open.</p>
+
+      <a class="contact-email" href="mailto:eduran@uccs.edu">eduran@uccs.edu</a>
+
+      <div class="contact-links">
+        <a href="https://github.com/eduran04" target="_blank" rel="noopener">GitHub <span class="dim">↗</span></a>
+        <a href="https://www.linkedin.com/in/04ed/" target="_blank" rel="noopener">LinkedIn <span class="dim">↗</span></a>
+      </div>
+    </div>
+
+    <form class="contact-form">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Message →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-grid">
+    <a href="#home" class="footer-logo">Elizandro Duran</a>
+    <div class="footer-credit">© 2026 · Built with intention</div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@4.3.6/dist/bundles/anime.umd.min.js" defer></script>
+<script src="main.js" defer></script>
+
+
+</body>
+</html>
