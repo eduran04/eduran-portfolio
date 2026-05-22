@@ -418,18 +418,23 @@
     position: relative;
   }
 
-  .thumb-df {
-    padding: 0;
-    background: #0a1628;
-    overflow: hidden;
-  }
-
-  .thumb-df img {
+  .project-logo-badge {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(circle at 20% 30%, color-mix(in srgb, var(--ink) 6%, transparent), transparent 55%),
+      radial-gradient(circle at 80% 70%, color-mix(in srgb, var(--ink) 4%, transparent), transparent 55%),
+      var(--bg-alt);
+  }
+
+  .project-logo-badge img {
     display: block;
+    object-fit: contain;
+    width: min(72%, 260px);
+    height: auto;
   }
 
   .thumb-linked {
@@ -441,31 +446,6 @@
     outline: 2px solid var(--ink);
     outline-offset: 4px;
     border-radius: 4px;
-  }
-
-  .thumb-ectf {
-    background:
-      radial-gradient(circle at 20% 30%, color-mix(in srgb, var(--ink) 8%, transparent), transparent 50%),
-      radial-gradient(circle at 80% 70%, color-mix(in srgb, var(--ink) 6%, transparent), transparent 50%),
-      var(--bg-alt);
-  }
-
-  .thumb-ectf img {
-    width: min(72%, 220px);
-    height: auto;
-    display: block;
-  }
-
-  .thumb-portfolai {
-    padding: 8%;
-    background: #000;
-  }
-
-  .portfolai-logo-img {
-    width: min(82%, 280px);
-    height: auto;
-    display: block;
-    object-fit: contain;
   }
 
   .view-links {
