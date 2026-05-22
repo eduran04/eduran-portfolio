@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Elizandro Duran — Computer Science</title>
+<title>Elizandro Duran - Computer Science</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -79,24 +79,26 @@
       <div class="featured-visual">
         <a class="thumb-ectf thumb-linked" href="https://ectf.mitre.org/" target="_blank" rel="noopener noreferrer" aria-label="MITRE Embedded Capture the Flag — open official competition site">
           <div class="project-logo-badge">
-            <img src="assets/ectf-mitre-photoaidcom-cropped.png" alt="MITRE eCTF logo" width="225" height="225" loading="lazy" decoding="async" />
+            <img src="assets/mitre-ectf-photoaidcom-cropped.png" alt="MITRE eCTF logo" width="225" height="225" loading="lazy" decoding="async" />
           </div>
         </a>
       </div>
       <div class="featured-body">
         <div class="project-num">Project 01 — 2026</div>
         <h3>MITRE <em>eCTF</em> 2026</h3>
-        <p class="desc">Secure HSM firmware for the MSPM0L2228, developed with a team of four (Team Sunrise, UCCS). Stores and transfers IC fabrication files with group-based authorization and PIN protection under the eCTF adversarial harness; the competition toolchain uses Docker for reproducible builds and testing. Cryptography includes ChaCha20-Poly1305, PBKDF2-SHA256, HKDF-SHA256, and HMAC-SHA-256, as documented in our system design (attack model, UART command set, defense-in-depth).</p>
+        <p class="desc">Team of four at UCCS (Team Sunrise) built secure HSM firmware for the TI MSPM0L2228 under the MITRE eCTF adversarial harness. Firmware enforces group based authorization and PIN protected access to IC fabrication files, with dual UART host and peer channels, ChaCha20 Poly1305 AEAD, HKDF and PBKDF2 key derivation, replay protection, and secure zeroization. Reproducible builds use Docker, wolfSSL, and Python driven secret generation, with LaTeX system design covering the attack model and defense in depth.</p>
         <div class="featured-tags">
           <span>Embedded Systems</span>
           <span>Cryptography</span>
           <span>C</span>
+          <span>Python</span>
           <span>Docker</span>
-          <span>Security</span>
+          <span>wolfSSL</span>
         </div>
         <div class="view-links">
           <a class="view-link" href="https://github.com/3unrise/2026-ectf-uccs-design" target="_blank" rel="noopener">View project →</a>
           <a class="view-link" href="https://ectf.mitre.org/" target="_blank" rel="noopener noreferrer">eCTF competition →</a>
+          <a class="view-link" href="https://credsverse.com/credentials/c044d8a9-50f6-418e-91fe-a33f3c6e3d9d" target="_blank" rel="noopener noreferrer">MITRE credential →</a>
         </div>
       </div>
     </article>
@@ -112,13 +114,13 @@
       <div class="featured-body">
         <div class="project-num">Project 02 — 2025</div>
         <h3>Portfol<em>AI</em></h3>
-        <p class="desc">Built by a team of four—an AI-driven investment platform for real-time market data, financial news, and sentiment. Django backend with secure object-oriented design; data persisted in PostgreSQL through Supabase. Integrated OpenAI, FinHub, and NewsAPI; shipped with CI/CD on Render and Cloudflare.</p>
+        <p class="desc">Capstone team of four built an AI powered stock analysis platform for watchlists, market fundamentals, and learning with zero financial risk. Full stack Django with REST APIs and session auth, integrated Finnhub, Alpha Vantage, NewsAPI, and OpenAI for live data, AI summaries, portfolio insights, and a context aware chat widget. Production deployment on Render with PostgreSQL (Supabase), Cloudflare CDN, and GitHub Actions CI/CD with pytest and security linting (Bandit, Flake8, Pylint).</p>
         <div class="featured-tags">
           <span>Django</span>
           <span>Python</span>
           <span>PostgreSQL</span>
-          <span>Supabase</span>
-          <span>AI / OpenAI</span>
+          <span>OpenAI</span>
+          <span>Tailwind CSS</span>
           <span>CI/CD</span>
         </div>
         <div class="view-links">
@@ -139,15 +141,18 @@
       <div class="featured-body">
         <div class="project-num">Project 03 — 2025</div>
         <h3>Digital Fingerprint <em>Analysis Tool.</em></h3>
-        <p class="desc">A privacy-focused web application that analyzes browser fingerprinting data so users can understand their online privacy exposure. Built with React and Flask (FingerprintJS Pro API), shadcn/ui and Tailwind, with a minimalist dark UI. Processing stays in-session—no storage or retention, aligned with GDPR/CCPA expectations. Deployed on Render.</p>
+        <p class="desc">Built a privacy focused full stack app with React and Flask that analyzes browser fingerprints via FingerprintJS Pro, including smart signals for VPN, Tor, proxies, and bots. Delivers uniqueness scoring, risk assessments, and personalized recommendations with consent flows before any analysis, using Tailwind CSS and shadcn/ui in a responsive dark theme. All processing stays in session with zero retention for GDPR and CCPA compliance, deployed on Render.</p>
         <div class="featured-tags">
           <span>React</span>
           <span>Flask</span>
+          <span>Python</span>
+          <span>Tailwind CSS</span>
           <span>Privacy</span>
-          <span>Tailwind</span>
           <span>Render</span>
         </div>
-        <a class="view-link" href="https://gitlab.com/cs4930-df/Digital-Fingerprint" target="_blank" rel="noopener noreferrer">View on GitLab →</a>
+        <div class="view-links">
+          <a class="view-link" href="https://gitlab.com/cs4930-df/Digital-Fingerprint" target="_blank" rel="noopener noreferrer">View on GitLab →</a>
+        </div>
       </div>
     </article>
 
@@ -281,8 +286,15 @@
         <span>Docker</span>
         <span>Django</span>
         <span>React</span>
+        <span>Flask</span>
+        <span>Tailwind CSS</span>
         <span>REST APIs</span>
         <span>PostgreSQL</span>
+        <span>CI/CD</span>
+        <span>OpenAI</span>
+        <span>Embedded Systems</span>
+        <span>Cryptography</span>
+        <span>pytest</span>
         <span>Git</span>
         <span>Jira</span>
         <span>SIEM</span>
@@ -297,6 +309,8 @@
         <span>Windows Server</span>
         <span>Azure</span>
         <span>AWS</span>
+        <span>Render</span>
+        <span>Vercel</span>
       </div>
     </div>
   </div>
