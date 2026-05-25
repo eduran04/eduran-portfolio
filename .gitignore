@@ -9,6 +9,12 @@ Desktop.ini
 *.swp
 *~
 
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
 # Logs / env (if added later)
 .env
 .env.*
