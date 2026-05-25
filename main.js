@@ -1,3 +1,5 @@
+import { inject } from '@vercel/analytics';
+
 const root = document.documentElement;
 const toggle = document.getElementById('themeToggle');
 const nav = document.getElementById('nav');
@@ -311,17 +313,12 @@ function hasAnalyticsConsent() {
 }
 
 function loadAnalytics() {
-  if (analyticsLoaded || document.querySelector('script[src="/_vercel/insights/script.js"]')) {
-    analyticsLoaded = true;
+  if (analyticsLoaded) {
     return;
   }
 
   analyticsLoaded = true;
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  const script = document.createElement('script');
-  script.src = '/_vercel/insights/script.js';
-  script.defer = true;
-  document.body.appendChild(script);
+  inject();
 }
 
 function showConsentBanner() {

@@ -1,0 +1,30 @@
+{
+  "name": "eduran-portfolio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A personal portfolio site showcasing projects, work experience, skills, and contact links.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduran04/eduran-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduran04/eduran-portfolio/issues"
+  },
+  "homepage": "https://github.com/eduran04/eduran-portfolio#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
+  "devDependencies": {
+    "vite": "^8.0.14"
+  }
+}
