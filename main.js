@@ -164,7 +164,7 @@ document.querySelectorAll('.reveal').forEach((el) => {
 });
 
 /**
- * Hero title — Moving Letters–style stagger (inspired by Tobias Ahlin, MIT)
+ * Hero title - Moving Letters-style stagger (inspired by Tobias Ahlin, MIT)
  * https://tobiasahlin.com/moving-letters/
  */
 function initHeroMovingLetters() {
@@ -282,3 +282,118 @@ function initScrollCuePulse() {
 }
 
 initScrollCuePulse();
+
+const CONSENT_KEY = 'analytics-consent';
+const consentBanner = document.getElementById('consentBanner');
+const consentAccept = document.getElementById('consentAccept');
+const consentDecline = document.getElementById('consentDecline');
+const consentClose = document.getElementById('consentClose');
+const consentManageBtns = document.querySelectorAll('.consent-manage-btn');
+
+let analyticsLoaded = false;
+
+function getAnalyticsConsent() {
+  try {
+    return localStorage.getItem(CONSENT_KEY);
+  } catch (e) {
+    return null;
+  }
+}
+
+function setAnalyticsConsent(value) {
+  try {
+    localStorage.setItem(CONSENT_KEY, value);
+  } catch (e) {}
+}
+
+function hasAnalyticsConsent() {
+  return getAnalyticsConsent() === 'granted';
+}
+
+function loadAnalytics() {
+  if (analyticsLoaded || document.querySelector('script[src="/_vercel/insights/script.js"]')) {
+    analyticsLoaded = true;
+    return;
+  }
+
+  analyticsLoaded = true;
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  const script = document.createElement('script');
+  script.src = '/_vercel/insights/script.js';
+  script.defer = true;
+  document.body.appendChild(script);
+}
+
+function showConsentBanner() {
+  if (!consentBanner) return;
+  consentBanner.hidden = false;
+  consentAccept?.focus();
+}
+
+function hideConsentBanner() {
+  if (!consentBanner) return;
+  consentBanner.hidden = true;
+}
+
+function dismissConsentBanner() {
+  hideConsentBanner();
+}
+
+function applyConsentChoice(value) {
+  setAnalyticsConsent(value);
+  if (value === 'granted') loadAnalytics();
+  hideConsentBanner();
+}
+
+function initAnalyticsConsent() {
+  const consent = getAnalyticsConsent();
+  if (consent === 'granted') {
+    loadAnalytics();
+    hideConsentBanner();
+  } else if (consent === 'denied') {
+    hideConsentBanner();
+  } else {
+    showConsentBanner();
+  }
+
+  consentAccept?.addEventListener('click', () => applyConsentChoice('granted'));
+  consentDecline?.addEventListener('click', () => applyConsentChoice('denied'));
+  consentClose?.addEventListener('click', () => dismissConsentBanner());
+  consentManageBtns.forEach((btn) => {
+    btn.addEventListener('click', () => showConsentBanner());
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && consentBanner && !consentBanner.hidden) {
+      dismissConsentBanner();
+    }
+  });
+}
+
+initAnalyticsConsent();
+
+/** Vercel Web Analytics custom events (no-op without consent or when analytics is unavailable). */
+function trackAnalyticsEvent(name, data) {
+  if (!hasAnalyticsConsent() || typeof window.va !== 'function') return;
+  try {
+    window.va('event', { name, data });
+  } catch (e) {}
+}
+
+function getOutboundLinkLabel(link) {
+  const aria = link.getAttribute('aria-label');
+  if (aria) return aria.slice(0, 255);
+  const text = link.textContent.replace(/\s+/g, ' ').trim();
+  if (text) return text.slice(0, 255);
+  return link.hostname.slice(0, 255);
+}
+
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="http"]');
+  if (!link || link.hostname === window.location.hostname) return;
+
+  trackAnalyticsEvent('Outbound click', {
+    label: getOutboundLinkLabel(link),
+    url: link.href.slice(0, 255),
+  });
+});

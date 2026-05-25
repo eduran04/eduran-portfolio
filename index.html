@@ -22,8 +22,9 @@
     <li class="nav-drawer-heading"><span id="navDrawerHeading">Menu</span></li>
     <li><a href="#home">Home</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#work">Work</a></li>
+    <li><a href="#work">Experience</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   </div>
@@ -44,7 +45,7 @@
 <section class="hero" id="home">
   <div>
     <div class="hero-meta">
-      <span>Portfolio — 001</span>
+      <span>Portfolio 001</span>
       <span>MMXXVI</span>
     </div>
     <h1 class="hero-title" id="heroTitle" aria-label="Elizandro Duran">
@@ -54,8 +55,8 @@
   </div>
 
   <p class="hero-intro">
-    <strong>Computer Science Senior</strong> at the <strong>University of Colorado Colorado Springs</strong>, concentrating in 
-    Cybersecurity. I'm looking forward to utilizing my skills in cyber, software, data science, and hardware engineering to build secure systems for real world applications. 
+    <strong>Computer Science Senior</strong> at the <strong>University of Colorado Colorado Springs</strong>, concentrating in
+    Cybersecurity. I'm looking forward to utilizing my skills in cyber, software, data science, and hardware engineering to build secure systems for real world applications.
   </p>
 
   <div class="hero-footer">
@@ -68,25 +69,51 @@
   </div>
 </section>
 
-<!-- ============ PROJECT EXPERIENCE ============ -->
+<!-- ============ QUICK FIT ============ -->
+<section class="quick-fit" id="credentials" aria-label="Quick fit summary">
+  <div class="quick-fit-grid reveal">
+    <div class="quick-fit-item">
+      <span class="quick-fit-label">Current role</span>
+      <p class="quick-fit-value">Software Engineering Intern at <strong>Northrop Grumman</strong></p>
+    </div>
+    <div class="quick-fit-item">
+      <span class="quick-fit-label">Focus</span>
+      <p class="quick-fit-value">Software engineering &amp; <strong>cybersecurity</strong>, embedded systems, cryptography, full-stack</p>
+    </div>
+    <div class="quick-fit-item">
+      <span class="quick-fit-label">Education</span>
+      <p class="quick-fit-value">B.S. Computer Science - Cybersecurity, <strong>UCCS</strong> · Fall 2026</p>
+    </div>
+    <div class="quick-fit-item">
+      <span class="quick-fit-label">Proof points</span>
+      <p class="quick-fit-value"><strong>MITRE eCTF</strong> · President's List · Chancellor's &amp; Cybersecurity Scholarships</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
 <section id="projects">
   <div class="section-label">Projects</div>
-  <h2 class="section-heading">Project <em>experience.</em></h2>
+  <h2 class="section-heading">Projects</h2>
 
   <div class="featured-grid">
 
     <article class="featured-item reveal">
       <div class="featured-visual">
-        <a class="thumb-ectf thumb-linked" href="https://ectf.mitre.org/" target="_blank" rel="noopener noreferrer" aria-label="MITRE Embedded Capture the Flag — open official competition site">
+        <a class="thumb-ectf thumb-linked" href="https://ectf.mitre.org/" target="_blank" rel="noopener noreferrer" aria-label="MITRE Embedded Capture the Flag, open official competition site">
           <div class="project-logo-badge">
             <img src="assets/mitre-ectf-photoaidcom-cropped.png" alt="MITRE eCTF logo" width="225" height="225" loading="lazy" decoding="async" />
           </div>
         </a>
       </div>
       <div class="featured-body">
-        <div class="project-num">Project 01 — 2026</div>
+        <div class="project-num">Project 01 · 2026</div>
         <h3>MITRE <em>eCTF</em> 2026</h3>
-        <p class="desc">Team of four at UCCS (Team Sunrise) built secure HSM firmware for the TI MSPM0L2228 under the MITRE eCTF adversarial harness. Firmware enforces group based authorization and PIN protected access to IC fabrication files, with dual UART host and peer channels, ChaCha20 Poly1305 AEAD, HKDF and PBKDF2 key derivation, replay protection, and secure zeroization. Reproducible builds use Docker, wolfSSL, and Python driven secret generation, with LaTeX system design covering the attack model and defense in depth.</p>
+        <ul class="case-points">
+          <li><strong>Problem:</strong> Design HSM firmware that protects IC fabrication secrets against adversarial attack in MITRE's embedded CTF.</li>
+          <li><strong>Contribution:</strong> Team of four (Team Sunrise), secure firmware on TI MSPM0L2228 with group auth, PIN-protected access, ChaCha20-Poly1305 AEAD, replay protection, and secure zeroization.</li>
+          <li><strong>Outcome:</strong> Reproducible Docker builds, wolfSSL integration, Python secret generation, and LaTeX system design documenting attack model and defense-in-depth.</li>
+        </ul>
         <div class="featured-tags">
           <span>Embedded Systems</span>
           <span>Cryptography</span>
@@ -105,16 +132,20 @@
 
     <article class="featured-item reverse reveal">
       <div class="featured-visual">
-        <a class="thumb-portfolai thumb-linked" href="https://portfolai.org/" target="_blank" rel="noopener noreferrer" aria-label="PortfolAI — open live site at portfolai.org">
+        <a class="thumb-portfolai thumb-linked" href="https://portfolai.org/" target="_blank" rel="noopener noreferrer" aria-label="PortfolAI, open live site at portfolai.org">
           <div class="project-logo-badge">
-            <img src="assets/portfolai-logo-photoaidcom-cropped.png" alt="PortfolAI — stylized tech penguin logo" width="815" height="815" loading="lazy" decoding="async" />
+            <img src="assets/portfolai-logo-photoaidcom-cropped.png" alt="PortfolAI, stylized tech penguin logo" width="815" height="815" loading="lazy" decoding="async" />
           </div>
         </a>
       </div>
       <div class="featured-body">
-        <div class="project-num">Project 02 — 2025</div>
+        <div class="project-num">Project 02 · 2025</div>
         <h3>Portfol<em>AI</em></h3>
-        <p class="desc">Team of four built an AI powered stock analysis platform for watchlists, market fundamentals, and learning with zero financial risk. Full stack Django with REST APIs and session auth, integrated Finnhub, Alpha Vantage, NewsAPI, and OpenAI for live data, AI summaries, portfolio insights, and a context aware chat widget. Production deployment on Render with PostgreSQL (Supabase), Cloudflare CDN, and GitHub Actions CI/CD with pytest and security linting (Bandit, Flake8, Pylint).</p>
+        <ul class="case-points">
+          <li><strong>Problem:</strong> Help users analyze stocks and learn investing without financial risk.</li>
+          <li><strong>Contribution:</strong> Full-stack Django platform with REST APIs, session auth, and integrations for Finnhub, Alpha Vantage, NewsAPI, and OpenAI for watchlists, AI summaries, and context-aware chat.</li>
+          <li><strong>Outcome:</strong> Production deployment on Render with PostgreSQL, Cloudflare CDN, and GitHub Actions CI/CD with pytest and security linting.</li>
+        </ul>
         <div class="featured-tags">
           <span>Django</span>
           <span>Python</span>
@@ -125,23 +156,26 @@
         </div>
         <div class="view-links">
           <a class="view-link" href="https://github.com/eduran04/PortfolAI-CS4300-Fall-2024-Group-4" target="_blank" rel="noopener">View project →</a>
-          <a class="view-link" href="https://portfolai.org/" target="_blank" rel="noopener noreferrer">PortfolAI site →</a>
         </div>
       </div>
     </article>
 
     <article class="featured-item reveal">
       <div class="featured-visual">
-        <a class="thumb-df thumb-linked" href="https://gitlab.com/cs4930-df/Digital-Fingerprint" target="_blank" rel="noopener noreferrer" aria-label="Digital Fingerprint Analysis Tool — open repository on GitLab">
+        <a class="thumb-df thumb-linked" href="https://gitlab.com/cs4930-df/Digital-Fingerprint" target="_blank" rel="noopener noreferrer" aria-label="Digital Fingerprint Analysis Tool, open repository on GitLab">
           <div class="project-logo-badge">
             <img src="assets/digital-fingerprint-photoaidcom-cropped.png" alt="Glowing cyan fingerprint badge" width="435" height="435" loading="lazy" decoding="async" />
           </div>
         </a>
       </div>
       <div class="featured-body">
-        <div class="project-num">Project 03 — 2025</div>
+        <div class="project-num">Project 03 · 2025</div>
         <h3>Digital Fingerprint <em>Analysis Tool.</em></h3>
-        <p class="desc">Built a privacy focused full stack app with React and Flask that analyzes browser fingerprints via FingerprintJS Pro, including smart signals for VPN, Tor, proxies, and bots. Delivers uniqueness scoring, risk assessments, and personalized recommendations with consent flows before any analysis, using Tailwind CSS and shadcn/ui in a responsive dark theme. All processing stays in session with zero retention for GDPR and CCPA compliance, deployed on Render.</p>
+        <ul class="case-points">
+          <li><strong>Problem:</strong> Educate users on browser fingerprint privacy risks without collecting or retaining personal data.</li>
+          <li><strong>Contribution:</strong> React + Flask app using FingerprintJS Pro for uniqueness scoring, VPN/Tor/proxy/bot detection, and consent-first analysis flows.</li>
+          <li><strong>Outcome:</strong> Session-only processing for GDPR/CCPA compliance, responsive dark-theme UI with Tailwind and shadcn/ui, deployed on Render.</li>
+        </ul>
         <div class="featured-tags">
           <span>React</span>
           <span>Flask</span>
@@ -162,7 +196,7 @@
 <!-- ============ WORK EXPERIENCE ============ -->
 <section id="work">
   <div class="section-label">Experience</div>
-  <h2 class="section-heading">Work <em>experience.</em></h2>
+  <h2 class="section-heading">Relevant <em>experience.</em></h2>
 
   <div class="work-list">
 
@@ -176,22 +210,30 @@
         <div class="work-body-text">
           <h4>Software Engineering Intern</h4>
           <div class="company">Northrop Grumman</div>
+          <ul class="work-summary">
+            <li>Defense &amp; aerospace software engineering in a regulated, correctness-critical environment.</li>
+            <li>Next step toward building career at the intersection of software and security.</li>
+          </ul>
         </div>
       </div>
       <div class="work-tags-inline">
         <span>Defense</span>
         <span>Aerospace</span>
       </div>
-      <div class="work-status"></span>Current</div>
+      <div class="work-status"><span class="status-dot" aria-hidden="true"></span>Current</div>
     </div>
 
     <div class="work-row reveal">
-      <div class="work-year">2026 —</div>
+      <div class="work-year">2026 -</div>
       <div class="work-body work-body-with-brand">
         <img class="work-brand-img work-brand-img--dining" src="assets/uccs-dining.png" alt="UCCS Dining Services" width="88" height="88" loading="lazy" decoding="async" />
         <div class="work-body-text">
           <h4>Student IT Material Manager</h4>
           <div class="company">UCCS Dining Services</div>
+          <ul class="work-summary">
+            <li>Manage IT hardware inventory, deployments, and support for campus dining operations.</li>
+            <li>Hands-on troubleshooting across devices, networks, and end-user systems.</li>
+          </ul>
         </div>
       </div>
       <div class="work-tags-inline">
@@ -202,12 +244,16 @@
     </div>
 
     <div class="work-row reveal">
-      <div class="work-year">2022 — 2026</div>
+      <div class="work-year">2022 - 2026</div>
       <div class="work-body work-body-with-brand">
         <img class="work-brand-img work-brand-img--raising" src="assets/raising-canes.png" alt="Raising Cane's Chicken Fingers" width="160" height="56" loading="lazy" decoding="async" />
         <div class="work-body-text">
           <h4>Certified Trainer &amp; Customer Specialist</h4>
           <div class="company">Raising Cane's</div>
+          <ul class="work-summary">
+            <li>Trained new hires, led shifts, and maintained high service standards under pressure.</li>
+            <li>Built communication, accountability, and team coordination skills transferable to engineering.</li>
+          </ul>
         </div>
       </div>
       <div class="work-tags-inline">
@@ -225,22 +271,20 @@
   <div class="about-grid">
     <div class="about-label-col">
       <div class="section-label">About</div>
-      <p class="about-quote">"Curious, motivated, and always learning."</p>
+      <p class="about-quote">Software &amp; security, built with intention.</p>
     </div>
 
     <div class="about-body reveal">
-      <p>I'm a <strong>first-generation Computer Science student</strong> at the University of Colorado Colorado Springs, specializing in <strong>Cybersecurity</strong>. Through the College of Engineering, I've built a foundation in software engineering and cybersecurity.</p>
+      <p>I'm a <strong>first-generation CS student</strong> at UCCS specializing in <strong>Cybersecurity</strong>, graduating Fall 2026. I work on systems where correctness and security matter, from hardening embedded firmware against replay attacks to shipping production full-stack applications.</p>
 
-      <p>What drives me is the problem itself, whether it's hardening an embedded system against replay attacks or setting up an AI-driven pipeline, I enjoy sitting with the hard parts until they eventuallymake sense. I'm equally comfortable debugging cryptographic protocols and working alongside a team to ship a product.</p>
-
-      <p>Looking ahead, I want to build my career at the <strong>intersection of software engineering and security</strong> — contributing to systems where correctness matters. My upcoming internship at Northrop Grumman is the next step in that direction.</p>
+      <p>I'm seeking <strong>full-time software engineering roles</strong> with a security focus in defense, aerospace, or security-conscious product teams.</p>
 
       <div class="education-block">
         <h4>Education</h4>
         <div class="edu-item">
           <div class="edu-item-text">
             <h5>University of Colorado Colorado Springs</h5>
-            <p>B.S. Computer Science — Cybersecurity · President's List</p>
+            <p>B.S. Computer Science - Cybersecurity · President's List</p>
           </div>
           <div class="edu-date">Fall 2026</div>
         </div>
@@ -264,7 +308,7 @@
 </section>
 
 <!-- ============ SKILLS ============ -->
-<section class="skills-section">
+<section class="skills-section" id="skills">
   <div class="section-label">Skills</div>
   <h2 class="section-heading">Skills &amp; <em>tools.</em></h2>
 
@@ -337,23 +381,91 @@
   </div>
 </section>
 
+<!-- ============ MY JOURNEY ============ -->
+<section class="my-journey" id="my-journey">
+  <div class="my-journey-grid">
+    <div class="my-journey-label">
+      <div class="section-label">About me</div>
+      <h2 class="section-heading">My <em>journey.</em></h2>
+      <p class="section-lead">If you're exploring cybersecurity, internships, or team projects, here's the path that got me here.</p>
+    </div>
+
+    <div class="my-journey-body reveal">
+      <div class="journey-card">
+        <h4>Starting point</h4>
+        <p>As a <strong>first-generation student</strong> at UCCS, I didn't have a built-in roadmap into tech. Coursework in software engineering and cybersecurity gave me the foundation, then projects and competitions turned theory into proof.</p>
+      </div>
+
+      <div class="journey-card">
+        <h4>What projects taught me</h4>
+        <ul class="journey-list">
+          <li><strong>MITRE eCTF:</strong> How to think like an attacker and defender at the same time: threat modeling, crypto implementation, and embedded constraints.</li>
+          <li><strong>PortfolAI:</strong> How a team ships a full-stack product: API design, third-party integrations, CI/CD, and production deployment.</li>
+          <li><strong>Digital Fingerprint:</strong> How privacy-by-design works in practice: consent flows, zero retention, and communicating risk to users.</li>
+        </ul>
+      </div>
+
+      <div class="journey-card">
+        <h4>From coursework to internship</h4>
+        <p>Competition work, scholarships, and consistent academic performance opened the door to my <strong>Northrop Grumman</strong> internship. Campus IT work kept my hardware and troubleshooting skills sharp alongside engineering coursework.</p>
+      </div>
+
+      <p class="journey-invite">Happy to talk about eCTF, internships, cybersecurity coursework, or project ideas. Reach out via <a href="https://www.linkedin.com/in/04ed/" target="_blank" rel="noopener noreferrer">LinkedIn</a> or <a href="https://github.com/eduran04" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="contact">
   <div class="contact-grid">
     <div class="contact-left">
       <div class="section-label">Contact</div>
       <h2>Get in <em>touch.</em></h2>
-      <p>Have a project in mind, want to collaborate, or just want to say hello? For now, the best way to reach me is through the links below.</p>
+      <p>Recruiting, collaboration, or questions about my work? The fastest way to reach me is through LinkedIn or GitHub.</p>
 
       <div class="contact-links">
-        <a href="https://github.com/eduran04" target="_blank" rel="noopener">GitHub <span class="dim">↗</span></a>
-        <a href="https://www.linkedin.com/in/04ed/" target="_blank" rel="noopener">LinkedIn <span class="dim">↗</span></a>
+        <a href="https://www.linkedin.com/in/04ed/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="dim">↗</span></a>
+        <a href="https://github.com/eduran04" target="_blank" rel="noopener noreferrer">GitHub <span class="dim">↗</span></a>
       </div>
     </div>
 
-    <div class="contact-status" role="status" aria-live="polite">
-      <p class="contact-status-lead">On-site contact</p>
-      <p>A contact form for this portfolio is currently in development. Thank you for your patience, it will be available here soon.</p>
+    <div class="contact-actions">
+      <p class="contact-actions-lead">Quick links</p>
+      <ul class="contact-action-list">
+        <li><a href="#projects">Browse projects</a></li>
+        <li><a href="#work">View experience</a></li>
+        <li><a href="#my-journey">My journey</a></li>
+        <li><a href="https://www.linkedin.com/in/04ed/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ============ -->
+<section class="privacy" id="privacy">
+  <div class="privacy-grid">
+    <div class="privacy-label">
+      <div class="section-label">Privacy</div>
+      <h2 class="section-heading">Privacy <em>notice.</em></h2>
+    </div>
+
+    <div class="privacy-body reveal">
+      <div class="privacy-card">
+        <h4>Analytics</h4>
+        <p>If you accept analytics, this site uses <strong>Vercel Web Analytics</strong> to collect anonymous page views, referrer, country, device type, and outbound link clicks. Data is aggregated and not used to identify you personally.</p>
+      </div>
+
+      <div class="privacy-card">
+        <h4>What we do not collect</h4>
+        <p>No advertising cookies, no cross-site tracking, and no personal identifiers. Analytics loads only after you opt in.</p>
+      </div>
+
+      <div class="privacy-card">
+        <h4>Local storage</h4>
+        <p>Your light/dark theme preference is saved in your browser so the site remembers your choice. This is separate from analytics.</p>
+      </div>
+
+      <p class="privacy-more">Read more in the <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener noreferrer">Vercel Web Analytics privacy documentation</a>. You can change your choice anytime via <button type="button" class="consent-manage-btn">Privacy preferences</button> in the footer.</p>
     </div>
   </div>
 </section>
@@ -362,10 +474,29 @@
 <footer>
   <div class="footer-grid">
     <a href="#home" class="footer-logo">Elizandro Duran</a>
-    <div class="footer-credit">© 2026 · Built with intention</div>
+    <div class="footer-meta">
+      <button type="button" class="footer-privacy-btn consent-manage-btn" id="consentManage">Privacy preferences</button>
+      <a href="#privacy" class="footer-privacy-link">Privacy notice</a>
+      <div class="footer-credit">© 2026 · Built with intention</div>
+    </div>
   </div>
 </footer>
 
+<div id="consentBanner" class="consent-banner" role="dialog" aria-labelledby="consentTitle" aria-describedby="consentDesc" hidden>
+  <div class="consent-banner-inner">
+    <div class="consent-banner-header">
+      <h2 id="consentTitle" class="consent-title">This site respects your privacy</h2>
+      <button type="button" class="consent-close" id="consentClose" aria-label="Close privacy notice">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <p id="consentDesc" class="consent-desc">We use privacy-friendly analytics to understand traffic and improve this portfolio. No advertising cookies. Your theme preference is stored locally. Read our <a href="#privacy">privacy notice</a> for details.</p>
+    <div class="consent-actions">
+      <button type="button" class="consent-btn consent-btn-secondary" id="consentDecline">Decline</button>
+      <button type="button" class="consent-btn consent-btn-primary" id="consentAccept">Accept All</button>
+    </div>
+  </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/animejs@4.3.6/dist/bundles/anime.umd.min.js" defer></script>
 <script src="main.js" defer></script>
