@@ -11,7 +11,7 @@ A personal portfolio site showcasing projects, work experience, skills, and cont
 
 ## Live site
 
-**https://eduran-portfolio.vercel.app/**
+**https://elizandroduran.com**
 
 The site is deployed as static files (on Vercel) with the project root as the web root. No install or build command required.
 
