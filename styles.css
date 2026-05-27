@@ -1225,19 +1225,23 @@
     font-weight: 500;
   }
 
-  .footer-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px 24px;
-  }
-
   .footer-credit {
     font-family: var(--mono);
     font-size: 10px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--muted);
+  }
+
+  .footer-credit a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    white-space: nowrap;
+  }
+
+  .footer-credit a:hover {
+    color: var(--ink);
   }
 
   /* ============ REVEAL ============ */
@@ -1458,7 +1462,6 @@
 
     footer { padding: 24px 20px; }
     .footer-grid { flex-direction: column; align-items: flex-start; }
-    .footer-meta { flex-direction: column; align-items: flex-start; gap: 10px; }
   }
 
   @media (max-width: 600px) {
