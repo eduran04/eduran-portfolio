@@ -17,4 +17,4 @@ The site is deployed as static files (on Vercel) with the project root as the we
 
 ## License
 
-All content in this repository is proprietary. You may not copy, modify, or redistribute it without prior written permission. See [LICENSE](LICENSE) for full terms.
+You may not copy, modify, or redistribute it without prior written permission. See [LICENSE](LICENSE) for full terms.
