@@ -1,6 +1,6 @@
 # ED-Portfolio
 
-A personal portfolio site showcasing projects, work experience, skills, and contact links. 
+A personal portfolio site showcasing projects, skills, and contact links. 
 
 ## What's in this repo
 

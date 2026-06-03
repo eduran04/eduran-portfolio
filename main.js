@@ -242,7 +242,7 @@ function initStaggerPills() {
         const row = e.target;
         const pillRoot = row.classList.contains('skill-list')
           ? row
-          : row.querySelector('.featured-tags, .work-tags-inline');
+          : row.querySelector('.featured-tags');
         if (!pillRoot) return;
         done.add(row);
         runStagger(pillRoot);
@@ -252,7 +252,7 @@ function initStaggerPills() {
     { threshold: 0.15 }
   );
 
-  document.querySelectorAll('.featured-item.reveal, .work-row.reveal').forEach((el) => {
+  document.querySelectorAll('.featured-item.reveal').forEach((el) => {
     el.classList.add('anime-stagger-host');
     io.observe(el);
   });
