@@ -233,6 +233,9 @@
 
   .theme-toggle:hover { border-color: var(--ink); }
 
+  /* Light mode is disabled for now (see main.js) - remove to bring the toggle back. */
+  .theme-toggle { display: none; }
+
   .theme-toggle-thumb {
     position: absolute;
     top: 3px;
@@ -828,17 +831,40 @@
     gap: 10px 16px;
   }
 
-  .skill-list span {
+  .skill-list > span {
+    display: inline-flex;
+    align-items: center;
     font-family: var(--serif);
     font-size: 18px;
     font-weight: 300;
   }
 
-  .skill-list span:not(:last-child)::after {
+  .skill-list > span:not(:last-child)::after {
     content: '·';
     margin-left: 16px;
     opacity: 0.4;
   }
+
+  .skill-icon {
+    flex: none;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.45em;
+    background-color: currentColor;
+    opacity: 0.75;
+    -webkit-mask-image: var(--skill-icon);
+    mask-image: var(--skill-icon);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  /* Wordmark logos are far wider than tall, so a square box shrinks them to
+     an illegible smudge. Give them room to sit at full cap height. */
+  .skill-icon-wide { width: 1.7em; }
 
   /* ============ CONTACT ============ */
   .contact { padding: 140px 48px 80px; }

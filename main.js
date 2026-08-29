@@ -7,25 +7,11 @@ const navLinks = document.getElementById('navLinks');
 const navBackdrop = document.getElementById('navBackdrop');
 const mqMobile = window.matchMedia('(max-width: 900px)');
 
-const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const stored = (() => {
-  try {
-    return localStorage.getItem('theme');
-  } catch (e) {
-    return null;
-  }
-})();
-const initial = stored || (systemDark ? 'dark' : 'light');
-root.setAttribute('data-theme', initial);
-
-toggle.addEventListener('click', () => {
-  const current = root.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  root.setAttribute('data-theme', next);
-  try {
-    localStorage.setItem('theme', next);
-  } catch (e) {}
-});
+/* Light mode is disabled for now: the theme is pinned to dark and the toggle is
+   hidden in styles.css. Any previously stored preference is left untouched so it
+   comes back when the block below is restored. To re-enable, swap this line for
+   the stored/system lookup and rebind the toggle click handler. */
+root.setAttribute('data-theme', 'dark');
 
 /** Dialog semantics only while the drawer is open on small viewports (avoids role on desktop). */
 function syncMobileNavDialogAttrs(open) {
