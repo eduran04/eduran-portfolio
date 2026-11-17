@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d0e12" />
+  <meta name="description" content="Projects by Elizandro Duran in embedded security, full-stack development, and privacy." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://elizandroduran.com/projects.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Elizandro Duran" />
+  <meta property="og:title" content="Projects | Elizandro Duran" />
+  <meta property="og:description" content="Projects by Elizandro Duran in embedded security, full-stack development, and privacy." />
+  <meta property="og:url" content="https://elizandroduran.com/projects.html" />
+  <meta property="og:image" content="https://elizandroduran.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Projects | Elizandro Duran</title>
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||(!t&&matchMedia('(prefers-color-scheme: light)').matches))d.classList.add('light')}catch(e){}})();</script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d0e12'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='ui-monospace%2C monospace' font-size='14' fill='%23f1e64b'%3EED%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="portfolio.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary">
+  <div class="wrap">
+    <a href="index.html" class="nav-home" aria-label="Elizandro Duran, home">ED</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+      </ul>
+      <button class="btn theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<header class="page-head wrap">
+  <p class="label eyebrow"><span class="idx">02</span> / Projects</p>
+  <h1>Projects</h1>
+  <p class="lede">Embedded security, full-stack applications, and privacy tooling. Flip a card for the details.</p>
+</header>
+
+<main class="wrap">
+  <section class="section" aria-label="Project list">
+    <div class="flip-grid">
+    <article class="flip" id="ectf" aria-labelledby="ectf-h">
+      <div class="flip-inner">
+        <div class="flip-face flip-front card">
+          <div class="flip-media"><img src="assets/mitre-ectf-logo.png" alt="" width="112" height="112" loading="lazy" decoding="async" /></div>
+          <p class="label">2026 &middot; Embedded security</p>
+          <h2 id="ectf-h">MITRE eCTF 2026</h2>
+          <p>Secure HSM firmware built by Team Sunrise (4 engineers) over a 4-month competition cycle.</p>
+          <div class="flip-actions">
+            <ul class="tags"><li>C</li><li>Python</li><li>wolfSSL</li><li>Docker</li></ul>
+            <button class="btn flip-btn" type="button" aria-expanded="false" aria-controls="ectf-back">Details <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <div class="flip-face flip-back card" id="ectf-back">
+          <p class="label">2026 &middot; Embedded security</p>
+          <h2>MITRE eCTF 2026</h2>
+          <ul class="points">
+          <li>Designed HSM firmware on the TI MSPM0L2228 to store and transfer IC fabrication secrets with group authorization and PIN-protected actions.</li>
+          <li>Implemented ChaCha20-Poly1305 AEAD, replay protection, and secure zeroization with wolfSSL, built reproducibly in Docker.</li>
+          <li>Led automated testing to a 100% pass rate on MITRE&rsquo;s test service; full marks on design docs, and the design withstood the attack phase.</li>
+          </ul>
+          <div class="flip-actions">
+            <div class="entry-links label">
+            <a href="https://github.com/3unrise/2026-ectf-uccs-design" target="_blank" rel="noopener noreferrer">Code &#8599;</a>
+            <a href="https://ectf.mitre.org/" target="_blank" rel="noopener noreferrer">Competition &#8599;</a>
+            <a href="https://credsverse.com/credentials/c044d8a9-50f6-418e-91fe-a33f3c6e3d9d?preview=1" target="_blank" rel="noopener noreferrer">Credential &#8599;</a>
+            </div>
+            <button class="btn flip-btn" type="button">Back <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="flip" id="portfolai" aria-labelledby="portfolai-h">
+      <div class="flip-inner">
+        <div class="flip-face flip-front card">
+          <div class="flip-media"><img src="assets/portfolai-logo.png" alt="" width="112" height="112" loading="lazy" decoding="async" /></div>
+          <p class="label">2025 &middot; Full-stack &middot; AI</p>
+          <h2 id="portfolai-h">PortfolAI</h2>
+          <p>AI-driven investment platform with real-time market data, news, and an AI assistant.</p>
+          <div class="flip-actions">
+            <ul class="tags"><li>Django</li><li>PostgreSQL</li><li>OpenAI</li><li>CI</li></ul>
+            <button class="btn flip-btn" type="button" aria-expanded="false" aria-controls="portfolai-back">Details <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <div class="flip-face flip-back card" id="portfolai-back">
+          <p class="label">2025 &middot; Full-stack &middot; AI</p>
+          <h2>PortfolAI</h2>
+          <ul class="points">
+          <li>Built a Django app with 8 core features, including live market data and news, AI analysis, an AI assistant, watchlists, and ticker tracking.</li>
+          <li>Integrated OpenAI, Finnhub, and NewsAPI, with credentials managed through GitHub secrets and environment variables.</li>
+          <li>Deployed on Render with PostgreSQL and Cloudflare; GitHub Actions CI runs pytest and security linting.</li>
+          </ul>
+          <div class="flip-actions">
+            <div class="entry-links label">
+            <a href="https://github.com/eduran04/PortfolAI-CS4300-Fall-2024-Group-4" target="_blank" rel="noopener noreferrer">Code &#8599;</a>
+            <a href="https://portfolai.org/" target="_blank" rel="noopener noreferrer">Live &#8599;</a>
+            </div>
+            <button class="btn flip-btn" type="button">Back <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="flip" id="fingerprint" aria-labelledby="fingerprint-h">
+      <div class="flip-inner">
+        <div class="flip-face flip-front card">
+          <div class="flip-media"><img src="assets/digital-fingerprint-logo.png" alt="" width="112" height="112" loading="lazy" decoding="async" /></div>
+          <p class="label">2025 &middot; Privacy</p>
+          <h2 id="fingerprint-h">Digital Fingerprint Analysis Tool</h2>
+          <p>Shows users how unique their browser fingerprint is and how to reduce it.</p>
+          <div class="flip-actions">
+            <ul class="tags"><li>React</li><li>Flask</li><li>Tailwind</li><li>Render</li></ul>
+            <button class="btn flip-btn" type="button" aria-expanded="false" aria-controls="fingerprint-back">Details <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <div class="flip-face flip-back card" id="fingerprint-back">
+          <p class="label">2025 &middot; Privacy</p>
+          <h2>Digital Fingerprint Analysis Tool</h2>
+          <ul class="points">
+          <li>Built a React + Flask app using FingerprintJS Pro for uniqueness scoring and VPN, Tor, proxy, and bot detection.</li>
+          <li>Designed consent-first, session-only processing so no personal data is retained (GDPR/CCPA-aligned).</li>
+          </ul>
+          <div class="flip-actions">
+            <div class="entry-links label">
+            <a href="https://gitlab.com/cs4930-df/Digital-Fingerprint" target="_blank" rel="noopener noreferrer">Code &#8599;</a>
+            </div>
+            <button class="btn flip-btn" type="button">Back <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap label">
+    <span>&copy; 2026 Elizandro Duran</span>
+    <span><a href="https://github.com/eduran04/eduran-portfolio" target="_blank" rel="noopener noreferrer">Source</a> &middot; <a href="https://github.com/eduran04/eduran-portfolio/blob/main/LICENSE" target="_blank" rel="license noopener noreferrer">License</a></span>
+  </div>
+</footer>
+</body>
+</html>

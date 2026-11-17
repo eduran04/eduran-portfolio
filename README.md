@@ -4,10 +4,11 @@ A personal portfolio site showcasing projects, skills, and contact links.
 
 ## What's in this repo
 
-- **`index.html`** - Page structure and content  
-- **`styles.css`** - Layout, typography, light/dark theme, responsive layout  
-- **`main.js`** - Theme preference, mobile nav, scroll-driven animations  
-- **`assets/`** - Images and logos  
+- **`index.html`** - About, experience, and selected work  
+- **`projects.html`**, **`education.html`**, **`skills.html`** - Detail pages  
+- **`portfolio.css`** - Shared design system (dark/light theme tokens, cards, timeline, flip cards, responsive rules)  
+- **`main.js`** - Light/dark theme toggle (remembers your choice) and project flip cards; pages remain usable without JavaScript  
+- **`assets/`** - Images, logos, and `icons/` (SVG icons tinted via CSS masks)  
 
 ## Live site
 
