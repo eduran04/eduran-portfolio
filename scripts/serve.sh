@@ -3,7 +3,7 @@
 # Works in Git Bash, WSL, and macOS/Linux.
 set -euo pipefail
 
-cd "$(dirname "$0")"
+cd "$(dirname "$0")/.."
 PORT="${PORT:-8000}"
 URL="http://localhost:${PORT}"
 

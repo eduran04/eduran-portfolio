@@ -1,15 +1,23 @@
 # ED-Portfolio
 
-A personal portfolio site showcasing projects, skills, and contact links. 
+A personal portfolio site showcasing experience, projects, education, and skills.
 
 ## What's in this repo
 
-- **`index.html`** - About, experience, and selected work  
-- **`projects.html`**, **`education.html`**, **`skills.html`** - Detail pages  
-- **`portfolio.css`** - Shared design system (dark/light theme tokens, cards, timeline, flip cards, responsive rules)  
-- **`main.js`** - Light/dark theme toggle (remembers your choice) and project flip cards; pages remain usable without JavaScript  
-- **`assets/`** - Images, logos, and `icons/` (SVG icons tinted via CSS masks)  
+```
+index.html, projects.html, education.html, skills.html   Pages
+404.html                                                 Not-found page
+css/style.css                                            Design system (dark/light tokens, cards, timeline, flip cards)
+js/main.js                                               Theme toggle and project flip cards (pages work without JS)
+assets/images/                                           Logos and the social preview image
+assets/icons/                                            SVG icons, tinted via CSS masks
+scripts/serve.sh                                         Local preview server
+robots.txt, vercel.json                                  Crawler rules and security headers
+```
 
+## Local preview
+
+Run `bash scripts/serve.sh` and open http://localhost:8000.
 ## Live site
 
 **https://elizandroduran.com**

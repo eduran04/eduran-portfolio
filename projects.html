@@ -12,7 +12,7 @@
   <meta property="og:title" content="Projects | Elizandro Duran" />
   <meta property="og:description" content="Projects by Elizandro Duran in embedded security, full-stack development, and privacy." />
   <meta property="og:url" content="https://elizandroduran.com/projects.html" />
-  <meta property="og:image" content="https://elizandroduran.com/assets/og-image.png" />
+  <meta property="og:image" content="https://elizandroduran.com/assets/images/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -22,10 +22,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="portfolio.css" />
-  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <nav class="site-nav" aria-label="Primary">
   <div class="wrap">
     <a href="index.html" class="nav-home" aria-label="Elizandro Duran, home">ED</a>
@@ -49,19 +50,19 @@
   <p class="lede">Embedded security, full-stack applications, and privacy tooling. Flip a card for the details.</p>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main">
   <section class="section" aria-label="Project list">
     <div class="flip-grid">
     <article class="flip" id="ectf" aria-labelledby="ectf-h">
       <div class="flip-inner">
         <div class="flip-face flip-front card">
-          <div class="flip-media"><img src="assets/mitre-ectf-logo.png" alt="" width="112" height="112" loading="lazy" decoding="async" /></div>
+          <div class="flip-media"><img src="assets/images/mitre-ectf-logo.png" alt="" width="112" height="112" loading="lazy" decoding="async" /></div>
           <p class="label">2026 &middot; Embedded security</p>
           <h2 id="ectf-h">MITRE eCTF 2026</h2>
           <p>Secure HSM firmware built by Team Sunrise (4 engineers) over a 4-month competition cycle.</p>
           <div class="flip-actions">
             <ul class="tags"><li>C</li><li>Python</li><li>wolfSSL</li><li>Docker</li></ul>
-            <button class="btn flip-btn" type="button" aria-expanded="false" aria-controls="ectf-back">Details <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+            <button class="btn flip-btn" type="button" aria-expanded="false" aria-controls="ectf-back">Details <i class="ic" style="--icon:url('../assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
           </div>
         </div>
         <div class="flip-face flip-back card" id="ectf-back">
@@ -78,7 +79,7 @@
             <a href="https://ectf.mitre.org/" target="_blank" rel="noopener noreferrer">Competition &#8599;</a>
             <a href="https://credsverse.com/credentials/c044d8a9-50f6-418e-91fe-a33f3c6e3d9d?preview=1" target="_blank" rel="noopener noreferrer">Credential &#8599;</a>
             </div>
-            <button class="btn flip-btn" type="button">Back <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+            <button class="btn flip-btn" type="button">Back <i class="ic" style="--icon:url('../assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
@@ -86,13 +87,13 @@
     <article class="flip" id="portfolai" aria-labelledby="portfolai-h">
       <div class="flip-inner">
         <div class="flip-face flip-front card">
-          <div class="flip-media"><img src="assets/portfolai-logo.png" alt="" width="112" height="112" loading="lazy" decoding="async" /></div>
+          <div class="flip-media"><img src="assets/images/portfolai-logo.png" alt="" width="112" height="112" loading="lazy" decoding="async" /></div>
           <p class="label">2025 &middot; Full-stack &middot; AI</p>
           <h2 id="portfolai-h">PortfolAI</h2>
           <p>AI-driven investment platform with real-time market data, news, and an AI assistant.</p>
           <div class="flip-actions">
             <ul class="tags"><li>Django</li><li>PostgreSQL</li><li>OpenAI</li><li>CI</li></ul>
-            <button class="btn flip-btn" type="button" aria-expanded="false" aria-controls="portfolai-back">Details <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+            <button class="btn flip-btn" type="button" aria-expanded="false" aria-controls="portfolai-back">Details <i class="ic" style="--icon:url('../assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
           </div>
         </div>
         <div class="flip-face flip-back card" id="portfolai-back">
@@ -108,7 +109,7 @@
             <a href="https://github.com/eduran04/PortfolAI-CS4300-Fall-2024-Group-4" target="_blank" rel="noopener noreferrer">Code &#8599;</a>
             <a href="https://portfolai.org/" target="_blank" rel="noopener noreferrer">Live &#8599;</a>
             </div>
-            <button class="btn flip-btn" type="button">Back <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+            <button class="btn flip-btn" type="button">Back <i class="ic" style="--icon:url('../assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
@@ -116,13 +117,13 @@
     <article class="flip" id="fingerprint" aria-labelledby="fingerprint-h">
       <div class="flip-inner">
         <div class="flip-face flip-front card">
-          <div class="flip-media"><img src="assets/digital-fingerprint-logo.png" alt="" width="112" height="112" loading="lazy" decoding="async" /></div>
+          <div class="flip-media"><img src="assets/images/digital-fingerprint-logo.png" alt="" width="112" height="112" loading="lazy" decoding="async" /></div>
           <p class="label">2025 &middot; Privacy</p>
           <h2 id="fingerprint-h">Digital Fingerprint Analysis Tool</h2>
           <p>Shows users how unique their browser fingerprint is and how to reduce it.</p>
           <div class="flip-actions">
             <ul class="tags"><li>React</li><li>Flask</li><li>Tailwind</li><li>Render</li></ul>
-            <button class="btn flip-btn" type="button" aria-expanded="false" aria-controls="fingerprint-back">Details <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+            <button class="btn flip-btn" type="button" aria-expanded="false" aria-controls="fingerprint-back">Details <i class="ic" style="--icon:url('../assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
           </div>
         </div>
         <div class="flip-face flip-back card" id="fingerprint-back">
@@ -136,7 +137,7 @@
             <div class="entry-links label">
             <a href="https://gitlab.com/cs4930-df/Digital-Fingerprint" target="_blank" rel="noopener noreferrer">Code &#8599;</a>
             </div>
-            <button class="btn flip-btn" type="button">Back <i class="ic" style="--icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
+            <button class="btn flip-btn" type="button">Back <i class="ic" style="--icon:url('../assets/icons/refresh-cw.svg')" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
