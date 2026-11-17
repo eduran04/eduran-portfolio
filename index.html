@@ -1,363 +1,142 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-
-<!-- Favicon (inline SVG monogram) -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23111'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia%2C serif' font-size='14' font-weight='600' fill='%23f6f5f2'%3EED%3C/text%3E%3C/svg%3E" />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Elizandro Duran - Computer Science & Cybersecurity</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
-<link rel="stylesheet" href="styles.css" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d0e12" />
+  <meta name="description" content="Elizandro Duran, software engineer and Computer Science (Cybersecurity) student at UCCS." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://elizandroduran.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Elizandro Duran" />
+  <meta property="og:title" content="Elizandro Duran | Software Engineer" />
+  <meta property="og:description" content="Elizandro Duran, software engineer and Computer Science (Cybersecurity) student at UCCS." />
+  <meta property="og:url" content="https://elizandroduran.com/" />
+  <meta property="og:image" content="https://elizandroduran.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Elizandro Duran | Software Engineer</title>
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='light'||(!t&&matchMedia('(prefers-color-scheme: light)').matches))d.classList.add('light')}catch(e){}})();</script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d0e12'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='ui-monospace%2C monospace' font-size='14' fill='%23f1e64b'%3EED%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="portfolio.css" />
+  <script src="main.js" defer></script>
 </head>
 <body>
-
-<!-- ============ NAV ============ -->
-<nav id="nav" aria-label="Primary">
-  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
-  <a href="#home" class="logo">ED.</a>
-  <div class="nav-panel" id="navPanel">
-  <ul class="nav-links" id="navLinks" aria-label="Site navigation">
-    <li class="nav-drawer-heading"><span id="navDrawerHeading">Menu</span></li>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  </div>
-  <div class="nav-right">
-    <button class="nav-menu-btn" type="button" id="navMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navPanel" aria-haspopup="dialog">
-      <span class="nav-menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
-    </button>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <span class="theme-toggle-thumb">
-        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </span>
-    </button>
+<nav class="site-nav" aria-label="Primary">
+  <div class="wrap">
+    <a href="index.html" class="nav-home" aria-label="Elizandro Duran, home">ED</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+      </ul>
+      <button class="btn theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+    </div>
   </div>
 </nav>
-
-<!-- ============ HERO ============ -->
-<section class="hero" id="home">
-  <div>
-    <div class="hero-meta">
-      <span>Portfolio 001</span>
-      <span>MMXXVI</span>
-    </div>
-    <h1 class="hero-title" id="heroTitle" aria-label="Elizandro Duran">
-      Elizandro<br>
-      <em>Duran.</em>
-    </h1>
+<header class="page-head wrap">
+  <p class="label eyebrow">Software Engineer &middot; Cybersecurity</p>
+  <h1>Elizandro Duran</h1>
+  <p class="lede">Software engineer and computer science student at UCCS, focused on cybersecurity. Graduating December 2026.</p>
+  <div class="actions">
+    <a class="btn btn--primary" href="projects.html">View projects <span class="arrow arrow-r" aria-hidden="true">&rarr;</span></a>
+    <a class="btn" href="https://github.com/eduran04" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">&#8599;</span></a>
+    <a class="btn" href="https://www.linkedin.com/in/04ed/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="arrow" aria-hidden="true">&#8599;</span></a>
   </div>
+</header>
 
-  <p class="hero-intro">
-    <strong>Computer Science Senior</strong> at the <strong>University of Colorado Colorado Springs</strong>, concentrating in
-    Cybersecurity. I'm looking forward to utilizing my skills in cyber, software, data science, and hardware engineering to build secure systems for real world applications.
-  </p>
-
-  <div class="hero-actions">
-    <a href="#projects" class="hero-btn hero-btn-primary">View projects</a>
-    <a href="#contact" class="hero-btn hero-btn-secondary">Contact</a>
-  </div>
-
-  <div class="hero-footer">
-    <span>Colorado, USA</span>
-    <div class="scroll-cue">
-      <span>Scroll</span>
-      <span class="line"></span>
+<main class="wrap">
+  <section class="section" aria-labelledby="about-h">
+    <h2 class="section-title" id="about-h"><span class="idx">01</span>About</h2>
+    <div class="split">
+      <div class="prose">
+        <p>I&rsquo;m a first-generation college student finishing a B.S. in Computer Science with a cybersecurity specialty at the University of Colorado Colorado Springs.</p>
+        <p>Most of my experience is in backend and full-stack development, test automation, and embedded security. I work mainly in Python, C#, TypeScript, and C, and I pick up new tools quickly when a project needs them.</p>
+        <p>I enjoy working on small teams, writing clear documentation, and competing in security events like MITRE&rsquo;s eCTF. In spring 2026 I studied AI and machine learning in Seoul, South Korea.</p>
+      </div>
+      <aside class="card" aria-label="At a glance">
+        <dl class="facts">
+          <dt>Role</dt><dd>Software Engineer Intern, Northrop Grumman</dd>
+          <dt>Study</dt><dd>B.S. Computer Science, UCCS</dd>
+          <dt>Focus</dt><dd>Cybersecurity</dd>
+          <dt>Certs</dt><dd><a href="https://www.credly.com/badges/92edf945-7aee-4b51-9568-b93750e9ca9f/public_url" target="_blank" rel="noopener noreferrer">CompTIA Security+</a><br /><a href="https://credsverse.com/credentials/c044d8a9-50f6-418e-91fe-a33f3c6e3d9d?preview=1" target="_blank" rel="noopener noreferrer">MITRE eCTF 2026</a></dd>
+          <dt>Location</dt><dd>Colorado, United States</dd>
+        </dl>
+      </aside>
     </div>
-    <span>U.S. Citizen</span>
-  </div>
-</section>
+  </section>
 
-<!-- ============ QUICK FIT ============ -->
-<section class="quick-fit" id="credentials" aria-label="Quick fit summary">
-  <div class="quick-fit-grid reveal">
-    <div class="quick-fit-item">
-      <span class="quick-fit-label">Current role</span>
-      <p class="quick-fit-value">Software Development Intern at Northrop Grumman</p>
-    </div>
-    <div class="quick-fit-item">
-      <span class="quick-fit-label">Focus</span>
-      <p class="quick-fit-value">Software engineering &amp; <strong>cybersecurity</strong>, embedded systems, cryptography, full-stack</p>
-    </div>
-    <div class="quick-fit-item">
-      <span class="quick-fit-label">Education</span>
-      <p class="quick-fit-value">B.S. Computer Science - Cybersecurity, <strong>UCCS</strong> · Fall 2026</p>
-    </div>
-    <div class="quick-fit-item">
-      <span class="quick-fit-label">Highlights</span>
-      <p class="quick-fit-value"><strong>MITRE eCTF</strong> · Dean's List · Chancellor's &amp; Cybersecurity Scholarships</p>
-    </div>
-  </div>
-</section>
+  <section class="section" aria-labelledby="exp-h">
+    <h2 class="section-title" id="exp-h"><span class="idx">02</span>Experience</h2>
+    <ol class="timeline">
+      <li>
+        <img class="tl-logo dark-only" src="assets/northrop-grumman-dark.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+        <img class="tl-logo light-only" src="assets/northrop-grumman-light.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+        <h3>Associate Software Engineer <span class="tag tag--accent">Incoming</span></h3>
+        <p class="when label">Jan 2027</p>
+        <p class="org">Northrop Grumman</p>
+      </li>
+      <li>
+        <img class="tl-logo dark-only" src="assets/northrop-grumman-dark.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+        <img class="tl-logo light-only" src="assets/northrop-grumman-light.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+        <h3>Software Engineer Intern</h3>
+        <p class="when label">Jun 2026 &ndash; Present</p>
+        <p class="org">Northrop Grumman</p>
+      </li>
+      <li>
+        <img class="tl-logo" src="assets/uccs-dining.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+        <h3>Student IT Material Manager</h3>
+        <p class="when label">Jan &ndash; May 2026</p>
+        <p class="org">University of Colorado Colorado Springs</p>
+      </li>
+    </ol>
+  </section>
 
-<!-- ============ PROJECTS ============ -->
-<section id="projects">
-  <div class="section-label">Projects</div>
-  <h2 class="section-heading">Projects</h2>
-
-  <div class="featured-grid">
-
-    <article class="featured-item reveal">
-      <div class="featured-visual">
-        <a class="thumb-ectf thumb-linked" href="https://ectf.mitre.org/" target="_blank" rel="noopener noreferrer" aria-label="MITRE Embedded Capture the Flag, open official competition site">
-          <div class="project-logo-badge">
-            <img src="assets/mitre-ectf-logo.png" alt="MITRE eCTF logo" width="225" height="225" loading="lazy" decoding="async" />
-          </div>
+  <section class="section" aria-labelledby="work-h">
+    <h2 class="section-title" id="work-h"><span class="idx">03</span>Selected work</h2>
+    <ul class="card-grid">
+      <li>
+        <a class="card card-hover work-card" href="projects.html#ectf">
+          <img src="assets/mitre-ectf-logo.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+          <h3>MITRE eCTF 2026</h3>
+          <p>Secure HSM firmware for an embedded capture-the-flag competition.</p>
+          <span class="go label">2026 <span class="arrow" aria-hidden="true">&rarr;</span></span>
         </a>
-      </div>
-      <div class="featured-body">
-        <div class="project-num">Project 01 · 2026</div>
-        <h3>MITRE <em>eCTF</em> 2026</h3>
-        <ul class="case-points">
-          <li><strong>Problem:</strong> Design HSM firmware that protects IC fabrication secrets against adversarial attack in MITRE's embedded CTF.</li>
-          <li><strong>Contribution:</strong> Team of four (Team Sunrise), secure firmware on TI MSPM0L2228 with group auth, PIN-protected access, ChaCha20-Poly1305 AEAD, replay protection, and secure zeroization.</li>
-          <li><strong>Outcome:</strong> Reproducible Docker builds, wolfSSL integration, Python secret generation, and LaTeX system design documenting attack model and defense-in-depth.</li>
-        </ul>
-        <div class="featured-tags">
-          <span>Embedded Systems</span>
-          <span>Cryptography</span>
-          <span>C</span>
-          <span>Python</span>
-          <span>Docker</span>
-          <span>wolfSSL</span>
-        </div>
-        <div class="view-links">
-          <a class="view-link" href="https://github.com/3unrise/2026-ectf-uccs-design" target="_blank" rel="noopener">View project →</a>
-          <a class="view-link" href="https://ectf.mitre.org/" target="_blank" rel="noopener noreferrer">eCTF competition →</a>
-          <a class="view-link" href="https://credsverse.com/credentials/c044d8a9-50f6-418e-91fe-a33f3c6e3d9d" target="_blank" rel="noopener noreferrer">MITRE credential →</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="featured-item reverse reveal">
-      <div class="featured-visual">
-        <a class="thumb-portfolai thumb-linked" href="https://portfolai.org/" target="_blank" rel="noopener noreferrer" aria-label="PortfolAI, open live site at portfolai.org">
-          <div class="project-logo-badge">
-            <img src="assets/portfolai-logo.png" alt="PortfolAI, stylized tech penguin logo" width="815" height="815" loading="lazy" decoding="async" />
-          </div>
+      </li>
+      <li>
+        <a class="card card-hover work-card" href="projects.html#portfolai">
+          <img src="assets/portfolai-logo.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+          <h3>PortfolAI</h3>
+          <p>Django investment platform with market data and an OpenAI-powered assistant.</p>
+          <span class="go label">2025 <span class="arrow" aria-hidden="true">&rarr;</span></span>
         </a>
-      </div>
-      <div class="featured-body">
-        <div class="project-num">Project 02 · 2025</div>
-        <h3>Portfol<em>AI</em></h3>
-        <ul class="case-points">
-          <li><strong>Problem:</strong> Help users analyze stocks and learn investing without financial risk.</li>
-          <li><strong>Contribution:</strong> Full-stack Django platform with REST APIs, session auth, and integrations for Finnhub, Alpha Vantage, NewsAPI, and OpenAI for watchlists, AI summaries, and context-aware chat.</li>
-          <li><strong>Outcome:</strong> Production deployment on Render with PostgreSQL, Cloudflare CDN, and GitHub Actions CI/CD with pytest and security linting.</li>
-        </ul>
-        <div class="featured-tags">
-          <span>Django</span>
-          <span>Python</span>
-          <span>PostgreSQL</span>
-          <span>OpenAI</span>
-          <span>Tailwind CSS</span>
-          <span>CI/CD</span>
-        </div>
-        <div class="view-links">
-          <a class="view-link" href="https://github.com/eduran04/PortfolAI-CS4300-Fall-2024-Group-4" target="_blank" rel="noopener">View project →</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="featured-item reveal">
-      <div class="featured-visual">
-        <a class="thumb-df thumb-linked" href="https://gitlab.com/cs4930-df/Digital-Fingerprint" target="_blank" rel="noopener noreferrer" aria-label="Digital Fingerprint Analysis Tool, open repository on GitLab">
-          <div class="project-logo-badge">
-            <img src="assets/digital-fingerprint-logo.png" alt="Glowing cyan fingerprint badge" width="435" height="435" loading="lazy" decoding="async" />
-          </div>
+      </li>
+      <li>
+        <a class="card card-hover work-card" href="projects.html#fingerprint">
+          <img src="assets/digital-fingerprint-logo.png" alt="" width="48" height="48" loading="lazy" decoding="async" />
+          <h3>Digital Fingerprint Analysis Tool</h3>
+          <p>Consent-first browser fingerprinting education tool in React and Flask.</p>
+          <span class="go label">2025 <span class="arrow" aria-hidden="true">&rarr;</span></span>
         </a>
-      </div>
-      <div class="featured-body">
-        <div class="project-num">Project 03 · 2025</div>
-        <h3>Digital Fingerprint <em>Analysis Tool.</em></h3>
-        <ul class="case-points">
-          <li><strong>Problem:</strong> Educate users on browser fingerprint privacy risks without collecting or retaining personal data.</li>
-          <li><strong>Contribution:</strong> React + Flask app using FingerprintJS Pro for uniqueness scoring, VPN/Tor/proxy/bot detection, and consent-first analysis flows.</li>
-          <li><strong>Outcome:</strong> Session-only processing for GDPR/CCPA compliance, responsive dark-theme UI with Tailwind and shadcn/ui, deployed on Render.</li>
-        </ul>
-        <div class="featured-tags">
-          <span>React</span>
-          <span>Flask</span>
-          <span>Python</span>
-          <span>Tailwind CSS</span>
-          <span>Privacy</span>
-          <span>Render</span>
-        </div>
-        <div class="view-links">
-          <a class="view-link" href="https://gitlab.com/cs4930-df/Digital-Fingerprint" target="_blank" rel="noopener noreferrer">View on GitLab →</a>
-        </div>
-      </div>
-    </article>
+      </li>
+    </ul>
+  </section>
+</main>
 
-  </div>
-</section>
-
-<!-- ============ ABOUT ============ -->
-<section id="about">
-  <div class="about-grid">
-    <div class="about-label-col">
-      <div class="section-label">About</div>
-      <p class="about-quote">Software &amp; security, built with intention.</p>
-    </div>
-
-    <div class="about-body reveal">
-      <p>I'm a <strong>first-generation</strong> student pursuing a B.S in Computer Science at UCCS with an emphasis in <strong>Cybersecurity</strong>, graduating Fall 2026. During my time in University, I've had the oppurtunity to work on securing systems where correctness matters, from hardening embedded firmware against replay attacks to shipping production full-stack applications.</p>
-
-      <p>Competitions, internships, and team projects taught me to how to work well within a team, deploy real productss under time constraints, and design with cybersecurity in mind from the start. I care not only about software that works but building secure and quality software that holds up under real-world use.</p>
-
-      <p>I'm always happy to talk about cybersecurity, internships, or project ideas. Reach out on <a href="https://www.linkedin.com/in/04ed/" target="_blank" rel="noopener noreferrer">LinkedIn</a> or <a href="https://github.com/eduran04" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-
-      <div class="education-block">
-        <h4>Education</h4>
-        <div class="edu-item">
-          <div class="edu-item-text">
-            <h5>University of Colorado Colorado Springs</h5>
-            <p>B.S. Computer Science - Cybersecurity · President's List</p>
-          </div>
-          <div class="edu-date">Fall 2026</div>
-        </div>
-
-        <div class="awards">
-          <div class="awards-title">Awards &amp; Coursework</div>
-          <div class="awards-list">
-            <span>Chancellor's Award</span>
-            <span>Reisher's Scholarship</span>
-            <span>Cybersecurity Scholarship</span>
-            <span>Python Programming</span>
-            <span>C Programming</span>
-            <span>Advanced Software Engineering</span>
-            <span>Cryptography</span>
-            <span>Design &amp; Analysis of Algorithms</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SKILLS ============ -->
-<section class="skills-section" id="skills">
-  <div class="section-label">Skills</div>
-  <h2 class="section-heading">Skills &amp; <em>tools.</em></h2>
-
-  <div class="skills-grid">
-    <div class="skill-category">
-      <h4>Languages</h4>
-      <div class="skill-list">
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/python.svg')" aria-hidden="true"></i>Python</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/openjdk.svg')" aria-hidden="true"></i>Java</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/javascript.svg')" aria-hidden="true"></i>JavaScript</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/typescript.svg')" aria-hidden="true"></i>TypeScript</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/c.svg')" aria-hidden="true"></i>C</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/csharp.svg')" aria-hidden="true"></i>C#</span>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h4>Systems &amp; Cloud</h4>
-      <div class="skill-list">
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/ubuntu.svg')" aria-hidden="true"></i>Linux (Ubuntu)</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/redhat.svg')" aria-hidden="true"></i>Linux (RedHat)</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/azure.svg')" aria-hidden="true"></i>Azure</span>
-        <span><i class="skill-icon skill-icon-wide" style="--skill-icon:url('assets/icons/aws.svg')" aria-hidden="true"></i>AWS</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/render.svg')" aria-hidden="true"></i>Render</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/vercel.svg')" aria-hidden="true"></i>Vercel</span>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h4>Web &amp; Frameworks</h4>
-      <div class="skill-list">
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/django.svg')" aria-hidden="true"></i>Django</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/react.svg')" aria-hidden="true"></i>React</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/flask.svg')" aria-hidden="true"></i>Flask</span>
-        <span>.NET</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/tailwindcss.svg')" aria-hidden="true"></i>Tailwind CSS</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/braces.svg')" aria-hidden="true"></i>REST APIs</span>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h4>Platform &amp; DevOps</h4>
-      <div class="skill-list">
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/docker.svg')" aria-hidden="true"></i>Docker</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/postgresql.svg')" aria-hidden="true"></i>PostgreSQL</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/refresh-cw.svg')" aria-hidden="true"></i>CI/CD</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/jenkins.svg')" aria-hidden="true"></i>Jenkins</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/ansible.svg')" aria-hidden="true"></i>Ansible</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/apachekafka.svg')" aria-hidden="true"></i>Kafka</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/git.svg')" aria-hidden="true"></i>Git</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/jira.svg')" aria-hidden="true"></i>Jira</span>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h4>AI &amp; LLM</h4>
-      <div class="skill-list">
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/openai.svg')" aria-hidden="true"></i>OpenAI API</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/claude.svg')" aria-hidden="true"></i>Claude API</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/database-zap.svg')" aria-hidden="true"></i>RAG</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/jupyter.svg')" aria-hidden="true"></i>Jupyter</span>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h4>Security &amp; Embedded</h4>
-      <div class="skill-list">
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/cpu.svg')" aria-hidden="true"></i>Embedded Systems</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/key-round.svg')" aria-hidden="true"></i>Cryptography</span>
-        <span><i class="skill-icon" style="--skill-icon:url('assets/icons/shield-alert.svg')" aria-hidden="true"></i>SIEM</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="contact" id="contact">
-  <div class="contact-grid">
-    <div class="contact-left">
-      <div class="section-label">Contact</div>
-      <h2>Get in <em>touch.</em></h2>
-      <p>Recruiting, collaboration, or questions about my work? The fastest way to reach me is through LinkedIn or GitHub.</p>
-
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/04ed/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="dim">↗</span></a>
-        <a href="https://github.com/eduran04" target="_blank" rel="noopener noreferrer">GitHub <span class="dim">↗</span></a>
-      </div>
-    </div>
-
-    <div class="contact-actions">
-      <p class="contact-actions-lead">Quick links</p>
-      <ul class="contact-action-list">
-        <li><a href="#projects">Browse projects</a></li>
-        <li><a href="#about">About me</a></li>
-        <li><a href="https://www.linkedin.com/in/04ed/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer>
-  <div class="footer-grid">
-    <a href="#home" class="footer-logo">Elizandro Duran</a>
-    <div class="footer-credit">© 2026 Elizandro Duran. All rights reserved. <a href="https://github.com/eduran04/eduran-portfolio/blob/main/LICENSE" rel="license noopener noreferrer" target="_blank">License</a></div>
+<footer class="site-footer">
+  <div class="wrap label">
+    <span>&copy; 2026 Elizandro Duran</span>
+    <span><a href="https://github.com/eduran04/eduran-portfolio" target="_blank" rel="noopener noreferrer">Source</a> &middot; <a href="https://github.com/eduran04/eduran-portfolio/blob/main/LICENSE" target="_blank" rel="license noopener noreferrer">License</a></span>
   </div>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/animejs@4.3.6/dist/bundles/anime.umd.min.js" defer></script>
-<script src="main.js" defer></script>
-
-
 </body>
 </html>

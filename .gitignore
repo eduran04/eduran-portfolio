@@ -13,3 +13,14 @@ Desktop.ini
 .env
 .env.*
 *.log
+
+# Visual Studio
+.vs/
+
+# Vercel / Node tooling
+.vercel/
+node_modules/
+
+# Private documents (never publish)
+*.pdf
+*.docx
