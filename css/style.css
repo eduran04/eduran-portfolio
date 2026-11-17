@@ -18,7 +18,6 @@
   --border-muted: oklch(0.26 var(--c) var(--hue));
   --accent: oklch(0.91 0.17 105);
   --accent-ink: oklch(0.16 0.02 105);
-  --success: oklch(0.76 0.15 150);
 
   --gradient: linear-gradient(0deg, var(--bg) 94%, var(--bg-light));
   --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
@@ -60,7 +59,6 @@ html.light {
   --border-muted: oklch(0.88 var(--c) var(--hue));
   --accent: oklch(0.5 0.11 95);
   --accent-ink: oklch(0.99 0 0);
-  --success: oklch(0.55 0.14 150);
   --shadow: 0 1px 2px oklch(0.3 0.02 var(--hue) / 0.08), 0 4px 8px oklch(0.3 0.02 var(--hue) / 0.06);
   --shadow-lg: 0 6px 12px oklch(0.3 0.02 var(--hue) / 0.1), 0 16px 32px oklch(0.3 0.02 var(--hue) / 0.1);
 }
@@ -88,13 +86,22 @@ a:not([class]) {
 }
 a:not([class]):hover { background-size: 100% 1px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.skip-link {
+  position: absolute;
+  top: var(--s2);
+  left: var(--s2);
+  z-index: 100;
+  padding: 8px 16px;
+  font: 400 12px/20px var(--mono);
+  color: var(--accent-ink);
+  background: var(--accent);
+  border-radius: 8px;
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }
 
 .wrap { width: min(100% - 2 * var(--gutter), var(--max)); margin-inline: auto; }
 .label { font: 400 12px/var(--lh) var(--mono); color: var(--text-subtle); letter-spacing: 0.02em; }
-.visually-hidden {
-  position: absolute; width: 1px; height: 1px; overflow: hidden;
-  clip: rect(0 0 0 0); white-space: nowrap;
-}
 html.light .dark-only,
 html:not(.light) .light-only { display: none; }
 
@@ -446,15 +453,6 @@ html:not(.js) .flip-btn { display: none; }
 .stat { padding-inline: var(--s4); border-left: 1px solid var(--border-muted); }
 .stat:first-child { padding-left: 0; border-left: 0; }
 .stat-value { display: block; font: 600 28px/36px var(--sans); letter-spacing: -0.02em; color: var(--text); }
-.icon-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-block: var(--s2);
-  color: var(--text);
-}
-.icon-list li + li { border-top: 1px solid var(--border-muted); }
-.icon-list .ic { background: var(--accent); }
 .rows li { padding-block: var(--s2); }
 .rows li + li { border-top: 1px solid var(--border-muted); }
 
