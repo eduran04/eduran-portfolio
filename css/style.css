@@ -285,7 +285,7 @@ html:not(.js) .theme-toggle { display: none; }
 }
 
 /* ============ EXPERIENCE TIMELINE ============ */
-.timeline { display: grid; gap: var(--s5); }
+.timeline { position: relative; display: grid; gap: var(--s5); }
 .timeline > li {
   position: relative;
   display: grid;
@@ -302,7 +302,25 @@ html:not(.js) .theme-toggle { display: none; }
   width: 1px;
   background: linear-gradient(var(--border), var(--border-muted));
 }
+/* One continuous trace runs the full height; logos sit above it and mask it. */
+.timeline::after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0;
+  height: var(--tl-h, 0px);
+  width: 1px;
+  z-index: 0;
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent) 0 -96px / 100% 96px no-repeat;
+}
+.timeline.is-traced::after { animation: timeline-trace 4.0s linear infinite; }
+@keyframes timeline-trace {
+  from { background-position: 0 -96px; }
+  to { background-position: 0 var(--tl-h, 0px); }
+}
 .tl-logo {
+  position: relative;
+  z-index: 1;
   grid-column: 1;
   grid-row: 1 / span 4;
   width: 48px;
@@ -409,7 +427,8 @@ html:not(.js) .theme-toggle { display: none; }
   padding-top: var(--s3);
 }
 .entry-links { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s3); }
-.flip:target .flip-face { border-color: var(--accent); }
+.flip:hover .flip-face { border-color: var(--accent); }
+.flip-btn { margin-left: auto; }
 .flip-btn .ic { width: 14px; height: 14px; background: currentColor; }
 .flip-btn:hover .ic { transform: rotate(180deg); }
 
@@ -489,6 +508,7 @@ html:not(.js) .flip-btn { display: none; }
   .section { padding-bottom: var(--s5); }
   .timeline > li { grid-template-columns: 40px minmax(0, 1fr); column-gap: var(--s3); }
   .timeline > li:not(:last-child)::before { left: 20px; top: 48px; }
+  .timeline::after { left: 20px; }
   .tl-logo { width: 40px; height: 40px; }
   .timeline .when { grid-column: 2; grid-row: auto; text-align: left; }
   .stat { padding-inline: var(--s3); }
@@ -501,4 +521,5 @@ html:not(.js) .flip-btn { display: none; }
     animation: none !important;
     transition: none !important;
   }
+  .timeline.is-traced::after { background: var(--accent); }
 }

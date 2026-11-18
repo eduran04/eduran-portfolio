@@ -41,4 +41,24 @@
     back.addEventListener('click', (e) => { if (!e.target.closest('a, button')) flip(false); });
     card.addEventListener('keydown', (e) => { if (e.key === 'Escape' && card.classList.contains('is-flipped')) flip(false); });
   });
+  document.querySelectorAll('.timeline').forEach((timeline) => {
+    const lastLogo = () => [...timeline.lastElementChild.querySelectorAll('.tl-logo')].find((el) => el.offsetParent);
+    const setTraceHeight = () => {
+      const logo = lastLogo();
+      if (logo) timeline.style.setProperty('--tl-h', `${logo.getBoundingClientRect().bottom - timeline.getBoundingClientRect().top}px`);
+    };
+    setTraceHeight();
+    if ('ResizeObserver' in window) new ResizeObserver(setTraceHeight).observe(timeline);
+    window.addEventListener('resize', setTraceHeight);
+
+    if (!('IntersectionObserver' in window)) {
+      timeline.classList.add('is-traced');
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      timeline.classList.toggle('is-traced', entries.some((entry) => entry.isIntersecting));
+    }, { threshold: 0.1 });
+    observer.observe(timeline);
+  });
 })();
