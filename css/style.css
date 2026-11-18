@@ -468,6 +468,9 @@ html:not(.js) .flip-btn { display: none; }
 }
 .degree h3 { margin-top: var(--s1); font: 600 24px/32px var(--sans); letter-spacing: -0.015em; }
 .degree .meta { margin-top: var(--s2); color: var(--text-muted); }
+.degree-id { display: flex; align-items: center; gap: var(--s4); }
+.degree-logo { width: 72px; height: 72px; flex: none; object-fit: contain; padding: 6px; background: #fff; border-radius: 12px; }
+.degree + .degree { margin-top: var(--s4); }
 .stats { display: grid; grid-template-columns: repeat(3, auto); }
 .stat { padding-inline: var(--s4); border-left: 1px solid var(--border-muted); }
 .stat:first-child { padding-left: 0; border-left: 0; }
